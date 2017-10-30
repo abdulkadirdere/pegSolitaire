@@ -1,0 +1,84 @@
+
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\begin{document}
+\title{\textbf{School of Computer Science and Applied Mathematics}}
+\maketitle
+\title{\textbf{Advanced Analysis of Algorithms}}
+\maketitle
+
+\begin{center}
+\title{\textbf{Peg Solitaire}}
+
+\maketitle
+\end{center}
+\begin{center}
+\title{Lab Report}
+\maketitle
+
+\end{center}
+
+\begin{center}
+
+Shaneel James-718840
+\\Abdulkadir Dere-752817
+\\Sabeehah Ismail- 797621
+\end{center}
+
+
+
+\newpage
+
+\tableofcontents
+\newpage
+\section{Introduction}
+We will conduct an experiment to analyse the performance of execution time of Peg Solitaire using backtracking algorithm. 
+
+
+\section{Objective}
+From our experiment we aim to determine if a threshold exists where a certain number of pegs in the starting configuration can drastically affect the empirical analysis of the algorithm. Our experiment measures the execution time by increasing the number of pegs on the initial configuration board and recording the running time of each addition.
+
+
+\section{Summary of theory}
+\subsection{Peg Solitaire}
+Peg Solitaire is a board game where a single player moves a series of pegs on a board that contains holes. Peg Solitaire can be played on various sizes and types of boards, but for our experiments we will be using an English board (fig. 1) which contains 33 holes.
+\subsubsection{Configuration}
+Traditionally the initial configuration of the English board is arranged so that 32 pegs are placed in the board and an empty space is left in the centre of the board (fig. 1). Peg Solitaire includes a variety of alternate initial configurations of pegs, which can include either the positioning or the number of pegs on the board.   
+\subsubsection{Rules}
+Peg Solitaire is played by moving a peg either horizontally or vertically, not diagonally. A peg is moved by jumping over another peg into an empty space, this empty space must be located next to the peg being jumped over and in the direction of the jump.The peg that is jumped over is removed from the board which leads to an additional empty space on the board (fig. 2). You can jump over only one peg at a time.
+\subsubsection{Goal}
+The goal of peg solitaire is to arrive to a board whereby all the pegs have been removed except for one peg. This last peg must be located in the centre of the board for the English board configuration, where we had an empty space at the beginning of the game.
+ 
+\subsection{Backtracking}
+Backtracking is a recursive search algorithm which aims to build possible paths until the algorithm reaches a solution. While building paths, if the algorithm determines that a given step will not lead to a desired solution, the algorithm will then 'backtrack' to its previous step and consider a new step that could lead to a solution. If all paths have been explored and the algorithm has not reached a solution, then it concludes that there is no solution to the given problem. 
+
+
+
+\section{Experimental Methodology}
+We shall measure the execution time for different initial configurations whereby each iteration will have one additional peg, it is expected that as the number of pegs increase so too does the execution time. The measurements will be analysed to determine if there is a threshold between a certain number of pegs where the threshold drastically increases.
+\\Our test sample database will be filled with initial configurations that all lead up to a solution.
+\\The execution times for each iteration will be plotted on a graph where the independent variable will be the number of pegs and the dependent variable will be the execution time. The execution time will be measured by using nanoseconds method within the Java System class to time how long the algorithm took to find a solution.
+
+\section{Theoretical Analysis}
+The best case of Peg Solitaire will occur when a board is in its final 
+
+\section{Presentation of Results}
+
+\section{Interpretation of Results}
+
+\section{Relate Results to theory}
+
+\section{Conclusion}
+
+\section{References}
+
+\section{Acknowledgements}
+
+
+
+\subsection{Objective}
+In our experiment, we aim to implement a peg solitaire algorithm that uses backtracking to produce the desired solution. The desired solution, in this case, is to have reached a point where there is only one peg left and this peg is at the centre of the board.
+Aim of the experiment is to ...
+
+
+\end{document}
