@@ -23,18 +23,19 @@ public class pegSolitaire {
         int[][] initialBoard = null;
 
         System.out.print("Enter number of pegs: ");
-        int pegCount = in.nextInt();
-
-        initialBoard = setupGameboard(pegCount);
-
-        System.out.println("Initial board:\n");
-        printBoard(initialBoard);
+        //int pegCount = in.nextInt();
+        for(int tempi=0;tempi<33;tempi++){
+            //initialBoard = setupGameboard(pegCount);
+            initialBoard = setupGameboard(tempi);
+            System.out.println(tempi+" Peg Board\n");
+            printBoard(initialBoard);
+        }
         final long startTime = System.nanoTime(); //start of timer
-        possibleMoves(initialBoard);
+        //possibleMoves(initialBoard);
         final long endTime = System.nanoTime(); //end of timer
 
         dur = (endTime - startTime); // /1000000000; //for seconds
-        System.out.println("Number of Pegs: " + pegCount);
+        //System.out.println("Number of Pegs: " + pegCount);
         System.out.println("Duration " + dur); // +" seconds");
         System.out.println("Counter: " + countMoves);
         countMoves = 0;
@@ -45,10 +46,10 @@ public class pegSolitaire {
             System.out.println("Solution reached\n");
             //printBoard(initialBoard);
         }
-
     }
-
-    public static boolean possibleMoves(int[][] gameboard) {//, int countMoves) {
+    
+    //backtracking algorithm
+    public static boolean possibleMoves(int[][] gameboard) {
         int height = 7;
         int width = 7;
         int[][] newboard = gameboard;
@@ -57,6 +58,7 @@ public class pegSolitaire {
             return true;
         } else {
             countMoves++;
+            //System.out.println(countMoves);
             for (int row = 0; row < gameboard.length; row++) {
                 for (int col = 0; col < gameboard.length; col++) {
                     //move West
@@ -157,7 +159,7 @@ public class pegSolitaire {
                 gameboard[i][j] = -1;
             }
         }
-        
+        //32 peg board
         gameboard[3][3] = 0; //0 means there is no peg
         gameboard[0][2] = 1; //1 means there is a peg
         gameboard[0][3] = 1;
@@ -192,7 +194,8 @@ public class pegSolitaire {
         gameboard[6][3] = 1;
         gameboard[6][4] = 1;
 
-        switch (pegCount) {
+        //Sample Test Database 
+        switch (pegCount){
             case 32:
                 gameboard[3][3] = 0; //0 means there is no peg
                 break;
